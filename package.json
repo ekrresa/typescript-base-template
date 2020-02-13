@@ -1,23 +1,29 @@
 {
   "name": "ts-template",
   "version": "1.0.0",
-	"description": "",
+  "description": "",
+  "author": "Ochuko Ekrresa <kelvinekrresa@gmail.com>",
   "main": "index.js",
   "scripts": {
-		"lint":"pretty-quick --staged && lint-staged",
-		"build":"rm -rf build && tsc"
+    "lint": "pretty-quick --staged && lint-staged",
+    "build": "rm -rf build && tsc",
+    "dev": "ts-node-dev --transpileOnly --no-notify --clear src"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": ">=4",
     "lint-staged": ">=10",
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.5"
   },
   "husky": {
@@ -26,6 +32,6 @@
     }
   },
   "lint-staged": {
-     "*.{ts,js}": "eslint --cache --fix"
+    "*.{ts,js}": "eslint --cache --fix"
   }
 }
